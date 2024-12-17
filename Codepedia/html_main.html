@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML・CSSの辞書</title>
+    <!-- フォント-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+    <style>
+        /* 配色は個人的に見やすくて好きなMonokaiに合わせてます。 */
+        /* ネット初期みたいなシンプルで平面なこの雰囲気すき */
+        *{
+            margin: 0;
+            padding: 0;
+            background-color:#272822;
+            color: #F8F8F2;
+        }
+        header,footer{
+            text-align: center;
+            border: 5px dotted #A6E22E; /* 点線の枠 */
+        }
+        header {
+            margin-bottom: 20px; /* 点線下余白 */
+        }
+        footer {
+            margin-top: 20px; /* 点線上余白 */
+        }
+        body{
+            font-family: 'DotGothic16', sans-serif;
+        }
+        h1 span{
+            color: #66d9ef;
+            font-size: 40px;
+        }
+        .container {
+            display: flex;
+            align-items: center;
+        }       
+        .contents {
+            flex: 1;
+            margin-left: 20px;
+        }
+        /* 画像を右に */
+        .table-of-contents__image {
+            margin-left: auto;
+            width: 150px;
+        }
+        .conceal{
+            color: #23251E;
+            text-decoration: underline;
+            text-decoration-color:#23241E;
+        }
+        #toc {
+            border: 3px solid #66d9ef;
+            padding-left: 10px;
+            width: 260px; /* 枠の右側 */
+        }
+        ul{
+            font-size: 20px;
+            list-style-position: inside;
+            list-style-type: none; /* マーカーを削除 */
+        }
+        ul li:before {
+            content: "・"; /* カスタムマーカーを設定 */
+            font-size: 24px; /* マーカーの大きさを変更 */
+            margin-right: 8px; /* マーカーとテキストの間隔を調整 */
+        }
+        /* 要素 */
+        .element{
+            color: #f92672;
+        }
+        /* 属性 */
+        .Property{
+            color: #A6E22E;
+        }
+        section{
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><span>HTML</span>,<span>CSS</span>のタグ辞書</h1>
+        <h2>～どうせ作るなら使えるものがいい～</h2>
+    </header>
+    <main>
+        <div class="container">
+            <div class="contents">
+                <nav id="toc">
+                    <!-- コピペ祭り第一弾 -->
+                    <h2>☆.・目次・.☆</h2>
+                    <ul>
+                    <li><a href="#section1">&lt;!DOCTYPE html&gt;</a></li>
+                    <li><a href="#section2">&lt;head&gt; &lt;/head&gt;</a></li>
+                    <li><a href="#section3">&lt;title&gt; &lt;/title&gt;</a></li>
+                    <li><a href="#section4">&lt;link -- &gt;</a></li>
+                    <li><a href="#section5">&lt;style&gt; &lt;/style&gt;</a></li>
+                    <li><a href="#section6">&lt;body&gt; &lt;/body&gt;</a></li>
+                    <li><a href="#section7">&lt;header&gt; &lt;/header&gt;</a></li>
+                    <li><a href="#section8">&lt;footer&gt; &lt;/footer&gt;</a></li>
+                    <li><a href="#section9">&lt;main&gt; &lt;/main&gt;</a></li>
+                    <li><a href="#section10">&lt;h1~h6&gt; &lt;/h1~h6&gt;</a></li>
+                    <li><a href="#section11">&lt;ing src="画像"&gt;</a></li>
+                    <li><a href="#section12">&lt;a href=" URL "&gt; &lt;/a&gt;</a></li>
+                    <li><a href="#section13">&lt;p&gt; &lt;/p&gt;</a></li>
+                    <li><a href="#section14">&lt;br&gt;</a></li>
+                    <li><a href="#section15">&lt;ul&gt; &lt;/ul&gt;</a></li>
+                    <li><a href="#section15">&lt;li&gt; &lt;/li&gt;</a></li>
+                    <li><a href="#section16">&lt;nav&gt; &lt;/nav&gt;</a></li>
+                    <li><a href="#section17">&lt;div&gt; &lt;/div&gt;</a></li>
+                    <li><a href="#section18">&lt;section&gt; &lt;/section&gt;</a></li>
+                    <li><a href="#section19">コメントアウト</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <a href="https://ansaikuropedia.org/wiki/%E3%82%AB%E3%82%A4%E3%83%AB" target="_blank">
+                <div class="image">
+                <img src="dolphin.png" alt="かわいいイルカの画像">
+                <p class="conceal">見つかった！ここを押してみて！！</p>
+                <!-- 画像貼らなきゃいけなくて、カイル君を貼ろうとしたけどあからさますぎると思って。 -->
+                <!-- 隠しURLとよく見たら見えるぐらいの隠し文字を添えてわかる人にはわかるようにしたよ！ -->
+                <!-- ずっとXP使ってたから結構愛着あるんだけどな…… -->
+            </a>
+            </div>
+          </div>
+          <!-- コピペ祭り第二弾 -->
+        <div>
+            <section id="section1">
+                <h2>・&lt;!<span class="element">DOCTYPE</span> <span class="Property">html</span>&gt;</h2><!-- &lt;要素&gt;で文字列にできる。 -->
+                <p style="margin-left: 2em;">HTMLを書くときに必ず必要になる前置きの宣言文。<br>
+                ( !+TAB )で宣言文のショートカットができる。</p>
+            </section>
+            <section id="section2">
+                <h2>・&lt;<span class="element">head</span>&gt; &lt;/<span class="element">head</span>&gt;</h2>
+                <p style="margin-left: 2em;">ページのタイトル、キーワード、説明、スタイルシートファイルのリンクなどのメタデータを含めることができる。<br>
+                'head'の外に'style'を書くのはページの読み込みが遅くなったりするからあまり推奨されてないらしい。</p>
+            </section>
+            <section id="section3">
+                <h2>・&lt;<span class="element">title</span>&gt; &lt;/<span class="element">title</span>&gt;</h2>
+                <p style="margin-left: 2em;"><span class="element">head</span>の中に記述。ページのタイトルを指定する要素。<br>
+                このタイトルはページが読み込まれた時にブラウザのタブに表示される。また、ブックマークやお気に入りに登録した時の名前にも使われる。</p>
+            </section>
+            <section id="section4">
+                <h2>・&lt;<span class="element">link</span><span class="Property"> -- </span>&gt;</h2>
+                <p style="margin-left: 2em;">外部のファイルをHTMLドキュメントに読み込むために使う。<br>
+                CSSファイル、Webフォントの読み込み、ウェブサイトのアイコン設定などができる。</p>
+            </section>
+            <section id="section5">
+                <h2>・&lt;<span class="element">style</span>&gt; &lt;/<span class="element">style</span>&gt;</h2>
+                <p style="margin-left: 2em;">CSSのルールを定義するために使う。要素の表示やレイアウトをカスタマイズすることができる。</p>
+            </section>
+            <section id="section6">
+                <h2>・&lt;<span class="element">body</span>&gt; &lt;/<span class="element">body</span>&gt;</h2>
+                <p style="margin-left: 2em;">テキスト、画像、ビデオ、ゲーム、再生可能な音声トラックなど、ページを訪れたウェブの利用者に表示したいすべてのコンテンツが含まれる。</p>
+            </section>
+            <section id="section7">
+                <h2>・&lt;<span class="element">header</span>&gt; &lt;/<span class="element">header</span>&gt;</h2>
+                <p style="margin-left: 2em;">Webページのヘッダー部分を示すために使う。Webページのロゴやタイトル、ナビゲーション、検索フォームなど。</p>
+            </section>
+            <section id="section8">
+                <h2>・&lt;<span class="element">footer</span>&gt; &lt;/<span class="element">footer</span>&gt;</h2>
+                <p style="margin-left: 2em;">ウェブページの最下部に配置される要素。<br>
+                サイトのコピーライト&copy;( &amp;copy; )や、お問い合わせフォーム、関連するリンク、ウェブサイトマップ、プライバシーポリシーなど、<br>
+                ウェブサイトの重要な情報やナビゲーションを書く。</p>
+            </section>
+            <section id="section9">
+                <h2>・&lt;<span class="element">main</span>&gt; &lt;/<span class="element">main</span>&gt;</h2>
+                <p style="margin-left: 2em;">Webページの本文の大部分が含まれる要素。<br>
+                <span class="element">main</span>はページのヘッダーとフッターの間に配置され、ページ内に1つしか使えない。</p>
+            </section>
+            <section id="section10">
+                <h2>・&lt;<span class="element">h1</span>~<span class="element">h6</span>&gt; &lt;/<span class="element">h1</span>~<span class="element">h6</span>&gt;</h2>
+                <p style="margin-left: 2em;">見出しの要素。h1～h6の6つがある。<br>
+                <span class="element">h1</span>は最も重要な見出しを表す。ページ全体で1回のみが望ましい。<br>
+                <span class="element">h2</span>は2番目に重要な見出しを表す。サブタイトルやセクションの見出しとして使う。<br>
+                <span class="element">h3</span>はh2以下に続くサブセクションの見出しを表す。<br>
+                <span class="element">h4</span>,<span class="element">h5</span>,<span class="element">h6</span>はさらに細分化された見出しを表す。見出しのレベルが深くなるほど、重要度は低くなる。そんな使わない。</p>
+            </section>
+            <section id="section11">
+                <h2>・&lt;<span class="element">img</span> <span class="Property">src</span>="画像"&gt;</h2>
+                <h2>・&lt;<span class="element">img</span> <span class="Property">src</span>="画像" <span class="Property">alt</span>="画像の説明"&gt;</h2>
+                <p style="margin-left: 2em;">HTMLに画像を表示するために使う。<br>
+                <span class="Property">src</span>属性は必須で、表示する画像のファイルパスを指定する。<span class="Property">alt</span>属性は、画像が読み込まれなかった場合や、<br>視覚障害のある人向けに画像の説明を提供するために使う。</p>
+            </section>
+            <section id="section12">
+                <h2>・&lt;<span class="element">a</span> <span class="Property">href</span>="URL"&gt; &lt;/<span class="element">a</span>&gt;</h2>
+                <h2>・&lt;<span class="element">a</span> <span class="Property">href</span>="URL" <span class="Property">target</span>=" "&gt; &lt;/<span class="element">a</span>&gt;</h2>
+                <p style="margin-left: 2em;">HTMLの中でリンクを作成するために使う。<br>
+                <span class="Property">href</span>属性が必須で、この属性にリンク先のURLを指定する。<br>
+                <span class="Property">target</span>属性でリンクを新しいタブで開く。</p>
+            </section>
+            <section id="section13">
+                <h2>・&lt;<span class="element">p</span>&gt; &lt;/<span class="element">p</span>&gt;</h2>
+                <p style="margin-left: 2em;">段落を表すためのタグで、段落の開始と終了を表す。<br>
+                文章の他にも、テキストや画像、テーブルなど、様々なコンテンツを含めることができる。</p>
+            </section>
+            <section id="section14">
+                <h2>・&lt;<span class="element">br</span>&gt;</h2>
+                <p style="margin-left: 2em;">改行するために使うタグ。</p>
+            </section>
+            <section id="section15">
+                <h2>・&lt;<span class="element">ul</span>&gt; &lt;/<span class="element">ul</span>&gt;</h2>
+                <h2>・&lt;<span class="element">li</span>&gt; &lt;/<span class="element">li</span>&gt;</h2>
+                <p style="margin-left: 2em;"><span class="element">ul</span>は、箇条書きリストを作成するために使い、<br>
+                <span class="element">li</span>は、ul要素内に書かれる箇条書きの項目を表す。</p>
+            </section>
+            <section id="section16">
+                <h2>・&lt;<span class="element">nav</span>&gt; &lt;/<span class="element">nav</span>&gt;</h2>
+                <p style="margin-left: 2em;">ウェブサイトのナビゲーションメニュー、目次、章立て、タブ、アコーディオンメニューなど、サイトの主要なナビゲーションを囲むために使う。
+            </section>
+            <section id="section17">
+                <h2>・&lt;<span class="element">div</span>&gt; &lt;/<span class="element">div</span>&gt;</h2>
+                <p style="margin-left: 2em;">特定の意味を持たず、コンテンツをグループ化するために使う。<br>
+                ウェブページのレイアウトを構成し、スタイルを適用するために、他の要素と組み合わせて使われる。</p>
+            </section>
+            <section id="section18">
+                <h2>・&lt;<span class="element">section</span>&gt; &lt;/<span class="element">section</span>&gt;</h2>
+                <p style="margin-left: 2em;">一つ以上の関連するコンテンツをグループ化するのに使う。<br>
+                <span class="element">div</span>は、特に意味を持たない汎用的なコンテナ要素で、複数の要素をまとめたり、スタイルを適用するためによく使い、<br>
+                <span class="element">section</span>は、コンテンツの節を表す要素で、文書の構造化に役立つ。</p>
+            </section>
+            <section id="section19">
+                <h2>・コメントアウト</h2>
+                <p style="margin-left: 2em;">( CTRL+/ )で文字をコメントアウトできる。もう一度入力すると解除できる。<br>
+                /* CSS */  &lt;!-- HTYML --&gt;</p>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <p>&copy;2023 Kanamaru</p>
+    </footer>
+</body>
+</html>
+<!-- https://developer.mozilla.org/ja/docs/Learn/Getting_started_with_the_web/HTML_basics -->

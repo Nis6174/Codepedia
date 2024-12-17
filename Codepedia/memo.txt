@@ -1,0 +1,67 @@
+
+http://localhost/Codepedia/index.html
+
+
+-- データベースの作成
+CREATE DATABASE `php_db`;
+
+CREATE DATABASE `py_db`;
+
+CREATE DATABASE `linux_db`;
+
+CREATE DATABASE `tcpip_db`;
+
+
+
+-- contents テーブルの作成
+CREATE TABLE `contents` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) NOT NULL,
+  `description` text DEFAULT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- updates テーブルの作成
+CREATE TABLE `updates` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `action` varchar(255) NOT NULL,
+  `date` timestamp NOT NULL DEFAULT current_timestamp(),
+  `content_title` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+＋押したら対応した教科作れて、データベース作って、適した辞書ページ作って、さっき作ったデータベースに適応させた編集ページ作って・・・
+
+
+
+
+　――　メインページ　――
+
+[　　  　ヘッダー  　　　]
+
+[- 目次 -] [* 更新履歴 *]
+[ conte1 ] [2024.02.15 ]
+[ conte2 ] [-----------]
+[ conte3 ] [2024.02.13 ]
+[ conte4 ] [-----------]
+
+・コンテンツ１
+　説明 ―――――――――――――――
+――――――――――――――――――――――
+
+・コンテンツ2
+　説明  ―――――――――――――――
+―――――――――――――――――――――――
+
+・コンテンツ3
+　説明  ―――――――――――――――
+―――――――――――――――――――――――
+
+[　　  　フッター 　　　]
+
+
+
+　――　編集ページ　――
+コンテンツの追加・編集・削除
+

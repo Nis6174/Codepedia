@@ -1,0 +1,208 @@
+@charset "UTF-8";
+/* CSS Document */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.top_main {
+    text-align: center;
+}
+.top_p {
+    margin-top: 20px;
+    padding: 0 20px;
+    line-height: 1.6;
+    font-size: 20px;
+}
+.top_h2 {
+    padding: 0 20px;
+    margin-bottom: 10px;
+    margin-top: 70px;
+    color: #333;
+}
+.top_ul {
+    list-style-type: none;
+    padding: 0 20px;
+    margin: 0;
+}
+.top_ul li {
+    margin-bottom: 10px;
+}
+dl {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 20px;
+}
+dt {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+dd {
+    margin-left: 0;
+    margin: 8px;
+}
+dd a {
+    text-decoration: none;
+}
+dd a:hover {
+    text-decoration: underline;
+}
+
+.main_h2 {
+    margin-left: 10px;
+}
+
+.left{
+    margin-left: 30px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #262626;
+    background-color: #f0ffff;
+}
+header {
+    text-align: center;
+    padding: 30px 0;
+    background-color: #ffb6c1;
+}
+.edit {
+    margin-left: 40px;
+}
+footer {
+    text-align: center;
+    margin-top: 100px;
+    padding: 40px 0;
+    background-color: #ffd700;
+}
+#toc, #updates {
+    width: 45%;
+    height: 300px;
+    overflow-y: scroll;
+    float: left;
+    margin-right: 20px;
+    border: 2px solid #262626; /* 枠線を追加 */
+    padding: 10px; /* コンテンツからの距離を追加 */
+    margin-top: 20px; /* 更新履歴と目次の間に余白を追加 */
+    margin-bottom: 30px;
+    background-color: #ffffff;
+}
+#toc {
+    margin-left: 20px;
+}
+.wind{
+    margin: 8px;
+}
+#updates {
+    float: right; /* 更新履歴を右寄せに */
+}
+#contents {
+    clear: both;
+    margin-top: 20px;
+}
+#contents h2 {
+    padding-left: 20px;
+}
+.content-item {
+    padding-left: 40px;
+    margin-bottom: 20px;
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+    #toc, #updates {
+        width: 100%;
+        float: none;
+        margin-right: 0;
+    }
+}
+
+
+
+.mgt_main {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+.form-container {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 30%;
+}
+
+.form-container h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.form-container form {
+    margin-bottom: 20px;
+}
+
+.form-container label {
+    font-weight: bold;
+}
+
+.form-container input[type="text"],
+.form-container textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-container input[type="submit"] {
+    background-color: #00bfff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-container input[type="submit"]:hover {
+    background-color: #555;
+}
+
+.message {
+    background-color: #8cff1a;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.back_link {
+    background-color: #00bfff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.back_div{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.f_mgt {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: #ffd700;
+}
+
+.foot-menu{
+    list-style:none;
+    padding-left:0;
+}
